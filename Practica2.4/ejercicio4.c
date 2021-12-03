@@ -29,6 +29,8 @@ int main(int argc, char **argv)
 		return -1;
 	}
 	close(fd);
+	
+	//para leer desde otra terminal, hacer cat tuberia
 
 	return 0;
 
