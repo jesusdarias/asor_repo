@@ -84,3 +84,9 @@ def get(self):
                }
         }
 ```
+**7)** Lastly, add the class as a resource and specify its route in the _app.py_ file. In our example:
+
+```python
+from resources.tabular.lime import Lime
+api.add_resource(Lime, '/Tabular/LIME'
+```
