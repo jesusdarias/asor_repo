@@ -88,5 +88,5 @@ def get(self):
 
 ```python
 from resources.tabular.lime import Lime
-api.add_resource(Lime, '/Tabular/LIME'
+api.add_resource(Lime, '/Tabular/LIME')
 ```
