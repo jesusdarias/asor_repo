@@ -16,3 +16,21 @@ class Lime(Resource):
 	def get(self):
 		return {}
 ```
+4)	In the post method, include the code for the generation of an explanation. First, define the mandatory arguments that must be passed for the explainer to get an explanation. In most explainers, this includes the files for the model and data (when needed), and an additional argument called params, which is a dictionary containing parameters such as a particular instance for local methods, configuration options, and additional information needed by the explainer. Note in the example that after parsing the arguments, we use joblib to load the file parameters since the model and data are passed as pickled files.
+
+```python
+
+def post(self):
+        parser = reqparse.RequestParser()
+        parser.add_argument("model", type=werkzeug.datastructures.FileStorage, location='files')
+        parser.add_argument("data", type=werkzeug.datastructures.FileStorage, location='files')
+        parser.add_argument('params')
+        args = parser.parse_args()
+        
+        data = args.get("data")
+        model = args.get("model")
+        dataframe = joblib.load(data)
+        params_json = json.loads(args.get("params"))
+        instance=params_json["instance"]
+        backend = params_json["backend"]
+```
