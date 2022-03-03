@@ -2,7 +2,7 @@
 
 ### How to add a new explainer to the catalog
 
-**1)**	In order to add a new explainer, you have to create a new Resource. First, go to the resources folder and select the folder corresponding to the data type of the explainer you want to add (If your explainer works with a different data type, please add the corresponding folder to the resources folder). For illustration purposes, we will add a new explainer, LIME tabular.
+**1)**	In order to add a new explainer, you have to create a new Resource. First, go to the _resources_ folder and select the folder corresponding to the data type of the explainer you want to add (If your explainer works with a different data type, please add the corresponding folder to the resources folder). For illustration purposes, we will add a new explainer, LIME tabular.
 
 **2)**	Inside the appropriate folder, ***create a new .py file*** with the name of your explainer. In our case, we create the lime.py file  inside _/resources/tabular/_ .
 
@@ -42,7 +42,7 @@ def post(self):
 ```
 **5)** Add the actual code for the generation of the explanation to the post method. **Note:** currently we return a json containing the values of each explanation. This json will also contain a URL to download a plot or image of the explanation when applicable.
 
-**6)** For the get method, we directly return a dictionary that serves a documentation for the explainer. In our example, we include a brief description of the explainer method, the format of the model and data files, and the actual parameters that should be passed in the *params* dictionary. We also include a usage example of this parameters. Example get method for LIME:
+**6)** For the get method, we directly return a dictionary that serves as documentation for the explainer. In our example, we include a brief description of the explainer method, the format of the model and data files, and the actual parameters that should be passed in the _params_ dictionary. We also include an example of usage for these parameters. Example get method for LIME:
 
 ```python
 def get(self):
