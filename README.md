@@ -8,7 +8,7 @@
 
 3)	Create a class for the explainer that represents a resource. This class needs to have *two different methods: post and get*. In our example:
 
-```
+```python
 from flask_restful import Resource
 class Lime(Resource):
 	def post(self):
