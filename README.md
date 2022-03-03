@@ -42,7 +42,7 @@ def post(self):
 ```
 **5)** Add the actual code for the generation of the explanation to the poste method. **Note:** currently we return a json containing the values of each explanation. This json will also contain a URL to download a plot or image of the explanation when applicable.
 
-**6)** For the get method, we directly return a dictionary that serves a documentation for the explainer. In our example, we include a brief description of the explainer method, the format of the model and data files, and the actual parameters that should be passed in the *params* dictionary. We also include a usage example of this parameters.
+**6)** For the get method, we directly return a dictionary that serves a documentation for the explainer. In our example, we include a brief description of the explainer method, the format of the model and data files, and the actual parameters that should be passed in the *params* dictionary. We also include a usage example of this parameters. Example get method for LIME:
 
 ```python
 def get(self):
