@@ -98,4 +98,7 @@ api.add_resource(Lime, '/Tabular/LIME')
 python app.py
 ```
 
-**2)** From another terminal, you can use curl to make the requests to the server. There are a few examples [here](examples/Tabular/example_curl_commands.docx)
+**2)** From another terminal, you can use curl to make the requests to the server. There are a few examples [here](https://github.com/isee4xai/ExplainerLibraries/blob/15ebd1f481703e3f318b70776bc2fc859b96c490/examples/Tabular/example_curl_commands.docx). The format of the request may vary depending on the implementation of the explainer, but generally should be similar to this:
+```cmd
+curl  -F "model=@**<modelfile>**" -F "data=@**<datafile>"** -F "params=<**jsonfile**" http://localhost:5444/LIME
+```
