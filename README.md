@@ -98,7 +98,10 @@ api.add_resource(Lime, '/Tabular/LIME')
 python app.py
 ```
 
-**2)** From another terminal, you can use curl to make the requests to the server. There are a few examples [here](https://github.com/isee4xai/ExplainerLibraries/blob/15ebd1f481703e3f318b70776bc2fc859b96c490/examples/Tabular/example_curl_commands.docx). The format of the request may vary depending on the implementation of the explainer. An example of a request to the tabular LIME method:
+**2)** From another terminal, you can use Curl to make the requests to the server. There are a few examples [here](https://github.com/isee4xai/ExplainerLibraries/blob/15ebd1f481703e3f318b70776bc2fc859b96c490/examples/Tabular/example_curl_commands.docx). The format of the request may vary depending on the implementation of the explainer. An example of a request to the tabular LIME method:
 ```cmd
 curl -F "model=@model.pkl" -F "data=@depr_data.pkl" -F "params=<params.json" http://localhost:5000/Tabular/LIME
 ```
+**3)** Alternatively to Curl, we recommend using Postman to elaborate the HTTP requests. Note in the image that the arguments are embedded in the body of the request, and that both model and data fields are files, while params is a json string:
+
+![image](https://user-images.githubusercontent.com/71895708/156748844-f541ed41-5302-4cf4-a4ba-f897e6089a85.png)
