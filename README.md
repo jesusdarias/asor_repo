@@ -90,3 +90,12 @@ def get(self):
 from resources.tabular.lime import Lime
 api.add_resource(Lime, '/Tabular/LIME')
 ```
+
+### Testing
+
+**1)** To launch the server, simply run:
+```cmd
+python app.py
+```
+
+**2)** From another terminal, you can use curl to make the requests to the server. There are a few examples [here](examples/Tabular/example_curl_commands.docx)
