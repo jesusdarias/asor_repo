@@ -100,5 +100,5 @@ python app.py
 
 **2)** From another terminal, you can use curl to make the requests to the server. There are a few examples [here](https://github.com/isee4xai/ExplainerLibraries/blob/15ebd1f481703e3f318b70776bc2fc859b96c490/examples/Tabular/example_curl_commands.docx). The format of the request may vary depending on the implementation of the explainer. An example of a request to the tabular LIME method:
 ```cmd
-curl -F "params=<params.json" -F "model=@model.pkl" -F "data=@depr_data.pkl" http://localhost:5000/Tabular/LIME
+curl -F "model=@model.pkl" -F "data=@depr_data.pkl" -F "params=<params.json" http://localhost:5000/Tabular/LIME
 ```
